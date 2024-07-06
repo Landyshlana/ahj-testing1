@@ -1,0 +1,22 @@
+
+  .card-active {
+   
+	outline-style: outset;
+	outline-color: green;
+	
+  border-radius:5px;
+   }
+        
+
+  .card {
+    
+    height: 50px;
+    width: 78px;
+   
+    }
+
+    .cards{
+      display:flex;
+      justify-content: space-between;
+      gap:5px;
+    }
