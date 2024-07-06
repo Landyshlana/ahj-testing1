@@ -7,19 +7,7 @@ describe('Card Validator form', () => {
   let browser=null;
   let page=null;
 
- /*beforeEach(async () => {
-    try {
-      browser = await puppeteer.launch({
-        headless: false,
-        slowMo: 100,
-        devtools: true,
-      });
-    } catch (e) {
-      console.error(e);
-    }
-
-    page = await browser.newPage();
-  });*/
+ 
   beforeAll(async () => {
     browser = await puppeteer.launch({
       headless: false, // show gui
@@ -76,9 +64,5 @@ describe('Card Validator form', () => {
     await page.waitForSelector('.message-luna.hidden');
   });
 
-  afterEach(async () => {
-    if (browser) {
-      await browser.close();
-    }
-  });
+  
 });
