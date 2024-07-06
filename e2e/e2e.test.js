@@ -4,10 +4,10 @@ jest.setTimeout(30000);
 
 describe('Card Validator form', () => {
   const baseUrl = 'http://localhost:9001';
-  let browser;
-  let page;
+  let browser=null;
+  let page=null;
 
- beforeEach(async () => {
+ /*beforeEach(async () => {
     try {
       browser = await puppeteer.launch({
         headless: false,
@@ -19,8 +19,8 @@ describe('Card Validator form', () => {
     }
 
     page = await browser.newPage();
-  });
-  /*beforeAll(async () => {
+  });*/
+  beforeAll(async () => {
     browser = await puppeteer.launch({
       headless: false, // show gui
       slowMo: 500,
@@ -31,13 +31,12 @@ describe('Card Validator form', () => {
 
   afterAll(async () => {
     await browser.close();
-  });*/
+  });
 
 
 
-  test('Validator should render on page start', async () => {
+  test('start', async () => {
     await page.goto(baseUrl);
-
     await page.waitForSelector('#form');
   });
 
