@@ -7,7 +7,7 @@
     "lint": "eslint",
     "start": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "e2e": "jest --testPathPattern=./e2e/"
+    "e2e": "jest --clearCache && jest --testPathPattern=./e2e/ --runInBand --detectOpenHandles"
   },
   "repository": {
     "type": "git",
