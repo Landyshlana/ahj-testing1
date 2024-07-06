@@ -2,12 +2,12 @@ import puppeteer from 'puppeteer';
 
 jest.setTimeout(30000);
 
-describe('Credit Card Validator form', () => {
+describe('Card Validator form', () => {
   const baseUrl = 'http://localhost:9001';
   let browser;
   let page;
 
- /* beforeEach(async () => {
+ beforeEach(async () => {
     try {
       browser = await puppeteer.launch({
         headless: false,
@@ -19,8 +19,8 @@ describe('Credit Card Validator form', () => {
     }
 
     page = await browser.newPage();
-  });*/
-  beforeAll(async () => {
+  });
+  /*beforeAll(async () => {
     browser = await puppeteer.launch({
       headless: false, // show gui
       slowMo: 500,
@@ -31,7 +31,7 @@ describe('Credit Card Validator form', () => {
 
   afterAll(async () => {
     await browser.close();
-  });
+  });*/
 
 
 
@@ -77,9 +77,9 @@ describe('Credit Card Validator form', () => {
     await page.waitForSelector('.message-luna.hidden');
   });
 
-  /*afterEach(async () => {
+  afterEach(async () => {
     if (browser) {
       await browser.close();
     }
-  });*/
+  });
 });
