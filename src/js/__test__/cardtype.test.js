@@ -4,7 +4,7 @@ test.each([
   ['mir for 2********', '2200123456789010', 'mir'],
   ['visa for 4********', '4000001234588889', 'visa'],
   ['master for 5********', '5467929858067895', 'master'],
-  ['discover for 6********', '6011000993', 'discover'],
+  ['discover for 6********', '6011000990139424', 'discover'],
   ['amex for 34********', '345455987654321', 'amex'],
   ['diners_club for 30********', '30163226829814', 'diners'],
   ['diners_club for 36********', '36163226829814', 'diners'],

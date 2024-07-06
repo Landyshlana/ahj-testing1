@@ -7,7 +7,7 @@ describe('Credit Card Validator form', () => {
   let browser;
   let page;
 
-  beforeEach(async () => {
+ /* beforeEach(async () => {
     try {
       browser = await puppeteer.launch({
         headless: false,
@@ -19,7 +19,21 @@ describe('Credit Card Validator form', () => {
     }
 
     page = await browser.newPage();
+  });*/
+  beforeAll(async () => {
+    browser = await puppetteer.launch({
+      headless: false, // show gui
+      slowMo: 500,
+      devtools: true, // show devTools
+    });
+    page = await browser.newPage();
   });
+
+  afterAll(async () => {
+    await browser.close();
+  });
+
+
 
   test('Validator should render on page start', async () => {
     await page.goto(baseUrl);
@@ -63,9 +77,9 @@ describe('Credit Card Validator form', () => {
     await page.waitForSelector('.message-luna.hidden');
   });
 
-  afterEach(async () => {
+  /*afterEach(async () => {
     if (browser) {
       await browser.close();
     }
-  });
+  });*/
 });
